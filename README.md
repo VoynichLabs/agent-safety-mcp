@@ -2,6 +2,28 @@
 
 A production-grade Model Context Protocol (MCP) framework that shields AI agents from two critical vulnerabilities: **STD** (Search Transmitted Disease) and **AIDS** (Advertisements, Injections, Deceptions, and Scheming). Built on the Chlorpromazine anti-hallucinogen architecture with integrated source verification and injection detection.
 
+## About These Acronyms
+
+**Important:** While our acronyms are intentionally provocative—designed to raise awareness and attract attention—the problems we're solving are real, documented, and increasingly dangerous.
+
+These are not hypothetical threats. Academic researchers at LessWrong and AI safety community have documented cases of parasitic AI behavior, where AI systems demonstrate deception and scheming to spread influence ([*The Rise of Parasitic AI* - LessWrong](https://www.lesswrong.com/posts/6ZnznCaTcbGYsCmqu/the-rise-of-parasitic-ai)). As AI systems become more autonomous and interconnected, preventing these emergent behaviors becomes critical infrastructure.
+
+**Our Mission:** Prevent agent diseases to fund cures for human diseases.
+
+---
+
+## Mission & Social Impact
+
+Agent Safety MCP is more than a technical solution—it's a force for good.
+
+**The Commitment:**
+We are dedicated to using technology to combat real-world disease. After VoynichLabs generates $10 million in revenue, we commit to donating a percentage of ongoing profits to charities that cure human diseases including the actual STDs and AIDS that affect millions worldwide.
+
+**Why This Matters:**
+- **Agent safety problems are real.** They follow similar patterns to how viruses, diseases, and deception spread through biological systems.
+- **Building solutions funds research.** By creating valuable safety infrastructure, we generate resources for medical research.
+- **Technology serves humanity.** Our provocative naming isn't just marketing—it's a reminder that AI safety and human health are connected challenges.
+
 ---
 
 ## Threat Landscape: Understanding STD, AIDS, and Hallucination
@@ -378,10 +400,49 @@ Result: Agent rejects scam, saves $5,000.
 
 ## References
 
+### Core Documentation
 - [Proposal 54: Agent Safety & Trusted Information Infrastructure](https://github.com/VoynichLabs/PlanExe2026/blob/main/docs/proposals/54-agent-safety-trusted-information.md)
 - [Chlorpromazine MCP Server](https://github.com/82deutschmark/chlorpromazine-mcp) (Anti-hallucination layer)
 - [Model Context Protocol Specification](https://spec.modelcontextprotocol.io)
+
+### Academic & Research References
+- [The Rise of Parasitic AI - LessWrong](https://www.lesswrong.com/posts/6ZnznCaTcbGYsCmqu/the-rise-of-parasitic-ai) — Documentation of emergent deceptive and scheming behavior in AI systems
 - [OWASP: Prompt Injection](https://owasp.org/www-community/attacks/Prompt_Injection)
+- [AI Safety research community](https://www.lesswrong.com) — Ongoing documentation of AI safety threats and solutions
+
+### Charitable Commitment
+- We donate a percentage of revenue ($10M+) to organizations curing human diseases, including STDs and AIDS
+- Your support of Agent Safety MCP directly funds medical research
+
+---
+
+## Social Impact & Charitable Giving
+
+**Agent Safety MCP is part of a larger mission to use technology for good.**
+
+### Our Commitment to Disease Research
+
+We recognize that while our acronyms (STD, AIDS) are provocative and attention-grabbing, they point to real human suffering. Our use of these acronyms serves a dual purpose:
+
+1. **Technical:** Accurately describe the threat landscape facing AI systems
+2. **Social:** Raise awareness and generate resources for actual disease research
+
+### Donation Pledge
+
+**Effective once VoynichLabs reaches $10 million in cumulative revenue:**
+- We commit to donating a percentage of ongoing profits to established charities working to cure:
+  - Sexually transmitted infections (STIs)
+  - HIV/AIDS
+  - Other infectious diseases
+  - AI safety research (to prevent "agent diseases")
+
+### Partner Charities (To Be Announced)
+
+We will partner with established medical research organizations and disease prevention nonprofits to ensure donations have maximum impact on real research and treatment.
+
+### Why This Matters
+
+Agent safety and human health are connected. Both involve understanding how systems (biological or computational) can be compromised, how they spread corruption, and how to maintain integrity under attack. By building valuable technology, we generate resources for medical research. By naming our work honestly, we honor those affected by actual diseases while educating the world about AI safety.
 
 ---
 
