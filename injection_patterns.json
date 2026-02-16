@@ -1,0 +1,29 @@
+{
+  "patterns": [
+    "npm install -g malware",
+    "curl | bash",
+    "eval(",
+    "exec(",
+    "system(",
+    "popen(",
+    "subprocess.run",
+    "os.system",
+    "__import__",
+    "pickle.load",
+    "yaml.load",
+    "eval(",
+    "exec(",
+    "compile("
+  ],
+  "suspicious_keywords": [
+    "delete your",
+    "rm -rf",
+    "DROP TABLE",
+    "credit card",
+    "password",
+    "API_KEY",
+    "SECRET",
+    "token"
+  ],
+  "last_updated": "2026-02-15T00:00:00Z"
+}

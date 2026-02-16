@@ -1,0 +1,19 @@
+{
+  "documentation": [
+    "platform.openai.com",
+    "docs.anthropic.com",
+    "docs.github.com",
+    "nodejs.org",
+    "developer.mozilla.org",
+    "rust-lang.org",
+    "python.org",
+    "golang.org"
+  ],
+  "whitelisted_domains": [
+    "github.com",
+    "npm.js.org",
+    "crates.io",
+    "pypi.org"
+  ],
+  "last_updated": "2026-02-15T00:00:00Z"
+}
